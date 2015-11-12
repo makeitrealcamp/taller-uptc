@@ -22,6 +22,28 @@ Opcional:
 
 ### Crear el proyecto
 
+**Listado 0**.Crear archivo index.html
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super Tienda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+
+  <h1>Hola Mundo</h1>
+  <p>Bienvenido a la Super tienda</p>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
+```
+
 **Listado 1**.
 
 ```
