@@ -167,3 +167,153 @@ $ touch app/assets/stylesheets/navbar.scss
 @import "navbar";
 ```
 
+**Listado 17**
+
+```
+git add .
+git commit -m "Agrega navbar"
+git push origin master
+```
+
+## Entendiendo la grilla
+
+**Listado 18**. En views/pages/index.html.erb
+
+```
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            Columna de 3
+        </div>
+        <div class="col-xs-3">
+            Columna de 3
+        </div>
+        <div class="col-xs-6">
+            Columna de 6
+        </div>
+        <div class="col-xs-4">
+            Columna de 3
+        </div>
+        <div class="col-xs-8">
+            Columna de 12
+        </div>
+
+        <div class="col-xs-12">
+            Columna de 12
+        </div>
+
+        <div class="col-xs-1">
+            Columna de 1
+        </div>
+        <div class="col-xs-1">
+            Columna de 1
+        </div>
+        <div class="col-xs-1">
+            Columna de 1
+        </div>
+
+    </div>
+</div>
+```
+
+**Listado 19**. En app/assets/stylesheets/application.scss
+
+http://sassmeister.com/
+```
+.row {
+    @for $i from 1 through 12 {
+      .col-xs-#{$i} {
+        border-style: solid;
+        border-color: red;
+      }
+    }
+}
+```
+
+**Listado 20**. En views/pages/index.html.erb
+```
+<div class="col-xs-12 col-md-3"> Barra de búsqueda </div>
+<div class="col-xs-12 col-md-9"> Carrusel </div>
+```
+
+## Barra de búsqueda
+
+http://getbootstrap.com/components/#input-groups-buttons
+
+**Listado 21**. En views/pages/index.html.erb
+```
+<div class="search-box">
+   <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar camisetas">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+      </div>
+ </div>
+```
+
+**Listado 22**
+```
+git add .
+git commit -m "Agrega barra de busqueda"
+git push origin master
+```
+
+## Filtro de categorías
+
+**Listado 23**. En views/pages/index.html.erb
+
+http://getbootstrap.com/components/#list-group
+```
+<div class="category-filter">
+   <h4>Categorías</h4>
+   <div class="list-group">
+     <a href="#" class="list-group-item active">
+       <span class="badge">14</span>
+       Todos
+     </a>
+     <a href="#" class="list-group-item">
+       <span class="badge">3</span>
+       Mujer
+     </a>
+     <a href="#" class="list-group-item">
+       <span class="badge">4</span>
+       Hombre
+     </a>
+     <a href="#" class="list-group-item">
+       <span class="badge">2</span>
+       Hipster
+     </a>
+     <a href="#" class="list-group-item">
+       <span class="badge">5</span>
+       Universidad
+     </a>
+   </div>
+ </div>
+```
+
+**Listado 24**. En app/assets/stylesheets/application.scss
+
+```
+.search-box {
+   padding-bottom: 20px;
+}
+```
+
+**Listado 25**. En views/pages/index.html.erb
+
+http://getbootstrap.com/css/#responsive-utilities
+```
+<div class="category-filter hidden-xs hidden-sm">
+```
+
+**Listado 26**
+```
+git add .
+git commit -m "Agrega filtro de categorías"
+git push origin master
+```
+
+## Carrusel
+
+
